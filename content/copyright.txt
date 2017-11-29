@@ -1,0 +1,10 @@
+© Mark Rickerby, 2017
+
+This is a computer-generated book produced for NaNoGenMo 2017. The source code is available under the terms of the MIT license.
+
+The source data is a public domain corpus of English words collected from an original dataset by Infochimps.
+
+https://maetl.net
+https://github.com/maetl/amic-automata
+https://github.com/NaNoGenMo/2017
+https://github.com/dwyl/english-words

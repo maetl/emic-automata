@@ -1,0 +1,9 @@
+Typefaces
+• PT Serif by ParaType
+• PT Mono by ParaType
+
+Tools
+• Ruby 2.4 (https://ruby-lang.org)
+• Calyx (https://calyx-rb.org)
+• Prawn (https://github.com/prawnpdf/prawn)
+• PNG (https://rubygems.org/gems/png)
