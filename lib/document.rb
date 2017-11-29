@@ -35,7 +35,14 @@ class Document
   end
 
   def render_colophon
+    start_new_page(margin: 90)
 
+    font("PT Serif") do
+      move_down 384
+      font_size(18) { text("Colophon") }
+      move_down 12
+      text(File.read("./content/colophon.txt"))
+    end
   end
 
   def render_preface
@@ -43,6 +50,8 @@ class Document
 
     font("PT Serif") do
       move_down 384
+      font_size(18) { text("Preface") }
+      move_down 12
       text(File.read("./content/preface.txt"))
     end
   end
@@ -76,7 +85,7 @@ class Document
     end
   end
 
-  def render_pattern_pages
+  def render_body
     start_new_page(margin: 36)
 
     font("PT Mono") do
@@ -86,7 +95,7 @@ class Document
     end
   end
 
-  def render_pattern_intro
+  def render_contents
     start_new_page
 
     font("PT Mono") do
@@ -97,16 +106,32 @@ class Document
     end
 
     move_down 36
-    image("output/cover-#{@timestamp}.png", position: :center)
+    image("output/rule-#{@timestamp}.png", position: :center)
+  end
+
+  def render_cover
+    canvas do
+      transparent(0.1) do
+        image("output/cover-#{@timestamp}.png", position: :center, vposition: :center, scale: 2.834)
+      end
+
+      font("PT Mono") do
+        fill_color "222222"
+        font_size(42) { draw_text(@word_pair.title, at: [56, 90]) }
+      end
+    end
   end
 
   def render_sections
-    #render_cover
+    render_cover
     render_half_title
     render_title
     render_copyright
-    #render_preface
-    #render_colophon
-    render_pattern_pages
+    render_preface
+    start_new_page
+    render_contents
+    render_body
+    start_new_page
+    render_colophon
   end
 end

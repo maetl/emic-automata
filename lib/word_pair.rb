@@ -8,6 +8,6 @@ class WordPair
   end
 
   def title
-    [@first, @last].sort.join(TITLE_JOINERS.sample)
+    @title ||= [@first, @last].sort.join(TITLE_JOINERS.sample)
   end
 end

@@ -11,17 +11,17 @@ class Book
   end
 
   def generate_rule_image
-    image = RuleImage.new(automaton.generate, @swatch.light, @swatch.dark)
+    image = RuleImage.new(automaton(200, 200).generate, @swatch.light, @swatch.dark, 200, 200)
+    image.save("#{@output_path}/rule-#{@timestamp}.png")
+  end
+
+  def generate_cover_image
+    image = RuleImage.new(automaton(210, 297).generate, @swatch.light, @swatch.dark, 210, 297)
     image.save("#{@output_path}/cover-#{@timestamp}.png")
   end
 
   def generate_document
-    document = Document.new(
-      automaton(width: page_width, generations: page_generations),
-      @word_pair,
-      @swatch,
-      @timestamp
-    )
+    document = Document.new(automaton(page_width, page_generations), @word_pair, @swatch, @timestamp)
     document.render_sections
     document.save_as("#{@output_path}/book-#{@timestamp}.pdf")
   end
@@ -35,11 +35,12 @@ class Book
   end
 
   def generate
+    generate_cover_image
     generate_rule_image
     generate_document
   end
 
-  def automaton(width: 200, generations: 200)
+  def automaton(width, generations)
     Automaton.new(rule: @rule, width: width, generations: generations)
   end
 end
