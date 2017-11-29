@@ -41,6 +41,10 @@ class Book
   end
 
   def automaton(width, generations)
-    Automaton.new(rule: @rule, width: width, generations: generations)
+    @seed_generation ||= Array.new(width, "0").map do
+      rand > 0.5 ? "1" : "0"
+    end
+
+    Automaton.new(rule: @rule, width: width, generations: generations, seed: @seed_generation.slice(0, width))
   end
 end

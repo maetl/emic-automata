@@ -1,18 +1,16 @@
 class Automaton
-  attr_reader :rule
+  attr_reader :rule, :first_generation
 
-  def initialize(rule: Rule.new, width: 200, generations: 200)
+  def initialize(rule: Rule.new, width: 200, generations: 200, seed: nil)
     @generations = generations
     @width = width
     @rule = rule
+    @seed_generation = seed
   end
 
   def generate
-    first_generation = Array.new(@width, "0").map do
-      rand > 0.5 ? "1" : "0"
-    end
-
-    cells = [first_generation]
+    cells = []
+    cells << @seed_generation if @seed_generation
 
     (@generations-1).times do |row|
       next_generation = []

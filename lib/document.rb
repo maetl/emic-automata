@@ -111,13 +111,13 @@ class Document
 
   def render_cover
     canvas do
-      transparent(0.1) do
+      transparent(0.15) do
         image("output/cover-#{@timestamp}.png", position: :center, vposition: :center, scale: 2.834)
       end
 
       font("PT Mono") do
         fill_color "222222"
-        font_size(42) { draw_text(@word_pair.title, at: [56, 90]) }
+        font_size(42) { draw_text(@word_pair.title, at: [42, 90]) }
       end
     end
   end
