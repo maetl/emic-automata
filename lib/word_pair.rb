@@ -1,5 +1,5 @@
 class WordPair
-  TITLE_JOINERS = ["/", " and ", " & ", " | ", "|", "–", ": ", ":", "^", " ", "~", "/", "|"]
+  TITLE_JOINERS = ["/", "&", "|", "–", ": ", ":", "^", " ", "~", "/", "|"]
 
   attr_reader :first, :last
 
