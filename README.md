@@ -26,6 +26,29 @@ The number of cells in each generation and the number of generations are depende
 - [Prawn](https://github.com/prawnpdf/prawn)
 - [PNG](https://rubygems.org/gems/png)
 
+## Install
+
+Use Bundler to install the required gems:
+
+```
+bundle
+```
+
+Or install them manually:
+
+```
+gem install rake calyx png prawn
+```
+
+## Run
+
+Run the `generate` task using Rake to output a PDF. By default, it goes into the `output` directory.
+
+```
+mkdir output
+rake generate
+```
+
 ## License
 
 The MIT License (MIT)

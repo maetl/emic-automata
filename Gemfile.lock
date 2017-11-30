@@ -1,0 +1,26 @@
+GEM
+  specs:
+    RubyInline (3.12.4)
+      ZenTest (~> 4.3)
+    ZenTest (4.11.1)
+    calyx (0.17.1)
+    pdf-core (0.7.0)
+    png (1.2.1)
+      RubyInline (~> 3.9)
+    prawn (2.2.2)
+      pdf-core (~> 0.7.0)
+      ttfunk (~> 1.5)
+    rake (12.3.0)
+    ttfunk (1.5.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  calyx
+  png
+  prawn
+  rake
+
+BUNDLED WITH
+   1.15.4
