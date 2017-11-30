@@ -2,6 +2,10 @@
 
 This is a computer-generated book produced for [NaNoGenMo 2017](https://github.com/NaNoGenMo/2017).
 
+## Details
+
+- [Entry on the NaNoGenMo 2017 repo](https://github.com/NaNoGenMo/2017/issues/123)
+
 ## Notes
 
 The book is generated using elementary cellular automata with two randomly selected units of text mapped to the binary states of each cell.
