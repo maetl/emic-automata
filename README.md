@@ -5,8 +5,10 @@ This is a computer-generated book produced for [NaNoGenMo 2017](https://github.c
 ## Details
 
 - [Entry on the NaNoGenMo 2017 repo](https://github.com/NaNoGenMo/2017/issues/123)
+- [Downloadable bundle of 100 generated books](https://maetl.itch.io/emic-automata)
+- [Notes on the concept and approach](https://maetl.net/notes/storyboard/generative-writing-with-cellular-automata)
 
-## Notes
+## Summary
 
 The book is generated using elementary cellular automata with two randomly selected units of text mapped to the binary states of each cell.
 
